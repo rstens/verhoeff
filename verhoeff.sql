@@ -1,11 +1,3 @@
-/* I have created a SQLServer User-Defined function for checking and creating the Verhoeff check digit.
-
-See WikiPedia:Verhoeff_algorithm
-The Verhoeff algorithm, a checksum formula for error detection first published in 1969, was developed by Dutch mathematician Jacobus Verhoeff (born 1927). 
-Like the more widely known Luhn algorithm, it works with strings of decimal digits of any length. It does a better job than the Luhn algorithm, though, in that it will detect 
-all "transposition" errors (switching of two adjacent digits), as well as catching many other types of errors that pass the Luhn formula undetected.
-*/
-
 /****** Object:  UserDefinedFunction [dbo].[checksumVerhoeff]    Script Date: 02/08/2008 15:54:28 ******/
 SET ANSI_NULLS ON
 GO
@@ -64,10 +56,3 @@ BEGIN
 
 	RETURN(@c)
 END;
-
-/* Usage for checking the validity of a number:*/
-SELECT dbo.checksumVerhoeff([number TO be checked],0) FROM [your TABLE]
-
-
-/*Usage for creating a check digit for a number:*/
-SELECT dbo.checksumVerhoeff([your number],1) FROM [your TABLE]
