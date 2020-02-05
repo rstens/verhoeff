@@ -24,10 +24,10 @@ Like the more widely known Luhn algorithm, it works with strings of decimal digi
 
 ```sql
 /* Usage for checking the validity of a number:*/
-SELECT dbo.checksumVerhoeff([number TO be checked],0) FROM [your TABLE]
+SELECT dbo.checksumVerhoeff([number TO be checked],0) <FROM [your TABLE]>
 
 
 /*Usage for creating a check digit for a number:*/
-SELECT dbo.checksumVerhoeff([your number],1) FROM [your TABLE]
+SELECT dbo.checksumVerhoeff([your number],1) <FROM [your TABLE]>
 
 ```
